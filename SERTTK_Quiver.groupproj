@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8D489C1F-B3E0-4AFD-BC61-FA6ABDE67213}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Source\SE.IDE.Quiver.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SE_IDE_Quiver">
+        <MSBuild Projects="Source\SE.IDE.Quiver.dproj"/>
+    </Target>
+    <Target Name="SE_IDE_Quiver:Clean">
+        <MSBuild Projects="Source\SE.IDE.Quiver.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SE_IDE_Quiver:Make">
+        <MSBuild Projects="Source\SE.IDE.Quiver.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SE_IDE_Quiver"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SE_IDE_Quiver:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SE_IDE_Quiver:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
