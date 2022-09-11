@@ -2,7 +2,7 @@
     <PropertyGroup>
         <ProjectGuid>{093B38FD-3985-4E1F-B251-7B7E004C702B}</ProjectGuid>
         <ProjectVersion>19.5</ProjectVersion>
-        <FrameworkType>None</FrameworkType>
+        <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
@@ -78,8 +78,11 @@
         <DCC_F>false</DCC_F>
         <DCC_K>false</DCC_K>
         <GenDll>true</GenDll>
-        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
         <SanitizedProjectName>SE_IDE_Quiver</SanitizedProjectName>
+        <DCC_Define>EXPERT;$(DCC_Define)</DCC_Define>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
         <VerInfo_Keys>package=com.embarcadero.$(MSBuildProjectName);label=$(MSBuildProjectName);versionCode=1;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=auto;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=</VerInfo_Keys>
@@ -110,12 +113,14 @@
         <DCC_UsePackage>soapserver;IndySystem;fmx;DbxCommonDriver;bindengine;IndyIPCommon;FireDACCommonODBC;FireDACCommonDriver;IndyProtocols;IndyIPClient;dbxcds;bindcomp;FireDACCommon;FmxTeeUI;IndyCore;RESTBackendComponents;bindcompfmx;bindcompdbx;inetdb;rtl;FireDACMySQLDriver;FireDACSqliteDriver;DbxClientDriver;RESTComponents;soapmidas;DBXSqliteDriver;IndyIPServer;dsnapxml;fmxFireDAC;dbexpress;DBXMySQLDriver;inet;FireDACPgDriver;FireDAC;fmxase;inetdbxpress;xmlrtl;tethering;dbrtl;dsnap;fmxdae;CloudService;CustomIPTransport;fmxobj;FMXTee;soaprtl;DBXInterBaseDriver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <DCC_UsePackage>soapserver;IndySystem;vclwinx;fmx;VCLTMSFNCCorePkgDXE14;vclie;DbxCommonDriver;bindengine;vcldb;IndyIPCommon;VCLRESTComponents;FireDACCommonODBC;FMXTMSFNCUIPackPkgDXE14;FireDACCommonDriver;VCLTMSFNCChartPkgDXE14;appanalytics;IndyProtocols;vclx;JclContainers;FMXTMSFNCChartPkgDXE14;IndyIPClient;dbxcds;vcledge;vclFireDAC;VCLSERTTKDXE22;bindcompvclwinx;bindcomp;FireDACCommon;FmxTeeUI;VCLTMSFNCUIPackPkgDXE14;FMXTMSFNCCorePkgDXE14;VCLTMSFNCWXPackPkgDXE14;IndyCore;RESTBackendComponents;bindcompfmx;bindcompdbx;inetdb;rtl;FireDACMySQLDriver;FireDACSqliteDriver;DbxClientDriver;FireDACADSDriver;RESTComponents;soapmidas;DBXSqliteDriver;vcl;vclactnband;IndyIPServer;dsnapxml;fmxFireDAC;dbexpress;dsnapcon;adortl;Jcl;Python;TeeUI;DBXMySQLDriver;Tee;FMXTMSFNCWXPackPkgDXE14;VclSmp;inet;VCLSERTTKDXE22DT;vclimg;PythonVcl;vcltouch;FireDACPgDriver;FireDAC;fmxase;inetdbxpress;xmlrtl;tethering;FMXSERTTKDXE22;dbrtl;bindcompvcl;dsnap;fmxdae;TeeDB;FMXSERTTKDXE22DT;CloudService;FireDACMSAccDriver;CustomIPTransport;fmxobj;bindcompvclsmp;FMXTee;JclDeveloperTools;soaprtl;vcldsnap;DBXInterBaseDriver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>designide;vclx;vcl;vclimg;rtl;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>(None)</Manifest_File>
+        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
+        <UsePackages>true</UsePackages>
+        <DCC_UnitSearchPath>C:\Repos\Srcs\TOTAL;C:\Repos\Srcs\Kastri\Core;C:\Repos\Srcs\Kastri\API;C:\Repos\Srcs\Kastri\Include;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <DCC_UsePackage>soapserver;IndySystem;vclwinx;fmx;VCLTMSFNCCorePkgDXE14;vclie;DbxCommonDriver;bindengine;vcldb;IndyIPCommon;VCLRESTComponents;FireDACCommonODBC;FMXTMSFNCUIPackPkgDXE14;FireDACCommonDriver;VCLTMSFNCChartPkgDXE14;appanalytics;IndyProtocols;vclx;FMXTMSFNCChartPkgDXE14;IndyIPClient;dbxcds;vcledge;vclFireDAC;VCLSERTTKDXE22;bindcompvclwinx;bindcomp;FireDACCommon;FmxTeeUI;VCLTMSFNCUIPackPkgDXE14;FMXTMSFNCCorePkgDXE14;IndyCore;RESTBackendComponents;bindcompfmx;bindcompdbx;inetdb;rtl;FireDACMySQLDriver;FireDACSqliteDriver;DbxClientDriver;FireDACADSDriver;RESTComponents;soapmidas;DBXSqliteDriver;vcl;vclactnband;IndyIPServer;dsnapxml;fmxFireDAC;dbexpress;dsnapcon;adortl;Python;TeeUI;DBXMySQLDriver;Tee;VclSmp;inet;vclimg;PythonVcl;vcltouch;FireDACPgDriver;FireDAC;fmxase;inetdbxpress;xmlrtl;tethering;FMXSERTTKDXE22;dbrtl;bindcompvcl;dsnap;fmxdae;TeeDB;CloudService;FireDACMSAccDriver;CustomIPTransport;fmxobj;bindcompvclsmp;FMXTee;soaprtl;vcldsnap;DBXInterBaseDriver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
@@ -132,6 +137,10 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>(None)</Manifest_File>
+        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -143,7 +152,16 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <RcCompile Include="Resources\Icon.rc">
+            <Form>Icon.res</Form>
+        </RcCompile>
         <DCCReference Include="SERTTK.QuiverExpert.pas"/>
+        <DCCReference Include="SERTTK.QuiverTypes.pas"/>
+        <DCCReference Include="frmQuiverOptionsInstance.pas">
+            <Form>frmQuiverOptInstance</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -164,6 +182,10 @@
                 <Source>
                     <Source Name="MainSource">SE.IDE.Quiver.dpr</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">
                 <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
